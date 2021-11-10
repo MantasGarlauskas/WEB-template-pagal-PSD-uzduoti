@@ -349,3 +349,19 @@ header .logo img{
     font-weight: 400;
     padding: 1rem;
   }
+  .button a{
+    color: white;
+    width: 293px;
+    height: 70px;
+    border-radius: 4px;
+    background-color: #17c2a4;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
