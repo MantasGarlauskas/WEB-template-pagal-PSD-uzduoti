@@ -9,7 +9,17 @@
   text-decoration: none;
   transition: all 2s;
   scroll-behavior: smooth;
+  /* overflow-x: hidden; */
 }
+
+.flex-window{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 7%;
+}
+
 /* welcome part */
 header{
   display: flex;
@@ -72,25 +82,20 @@ header .logo img{
 /* services part */
 .services{
   background-color: #17c2a4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   color: white;
-  padding: 2rem 7%;
 }
-.services .inner-services{
+.services .inner-services1{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
   width: 100vw;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-bottom: 120px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 120px;
 }
-.inner-services .block{
+.inner-services1 .services-block{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,13 +146,7 @@ header .logo img{
 
 .team{
     background-color: #e7f1f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem 7%;
-    width: 100vw;
-  }
+}
 .team .inner-services{
     display: flex;
     justify-content: center;
@@ -217,33 +216,28 @@ header .logo img{
 
   .skills{
     background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem 7%;
-    width: 100vw;
   }
 .skills .inner-services{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 1%;
     width: 100vw;
     padding-left: 10%;
     padding-right: 10%;
     margin-bottom: 120px;
+    flex-wrap: wrap;
+    flex: 1 1 200px;
   }
-.skill .inner-services .block{
+.skills .inner-services .skills-block{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex: 1 1 200px;
     text-align: center;
     padding: 2rem 1rem;
-  }
+    flex-wrap: wrap;
+    }
 .skills h1{
     font-size: 40px;
     letter-spacing: 4px;
@@ -253,7 +247,6 @@ header .logo img{
     padding: 1rem;
     text-align: center;
     margin-top: 100px;
-
   }
 #line{
     padding: 1rem;
@@ -266,7 +259,7 @@ header .logo img{
     text-align: center;
     padding-bottom: 2rem;
   }
-.skills .block h3{
+.skills .skills-block h3{
     font-size: 24px;
     letter-spacing: 0px;
     color: #3c4761;
@@ -312,7 +305,7 @@ header .logo img{
     padding-right: 10%;
     margin-bottom: 120px;
   }
-.portfolio .inner-services .block{
+.portfolio .inner-services .portfolio-block{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -342,7 +335,7 @@ header .logo img{
     text-align: center;
     padding-bottom: 2rem;
   }
-.portfolio .block h3{
+.portfolio .portfolio-block h3{
     font-size: 18px;
     letter-spacing: 0px;
     color: #393939;
@@ -369,12 +362,7 @@ header .logo img{
 
 .testimonials{
     background-color: #d74680;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     color: white;
-    padding: 2rem 7%;
   }
   .testimonials .inner-services{
     display: flex;
@@ -387,7 +375,7 @@ header .logo img{
     padding-right: 10%;
     margin-bottom: 120px;
   }
-  .inner-services .block{
+  .inner-services .testimonials-block{
     display: flex;
     align-items:flex-start;
     flex-direction: row;
@@ -417,7 +405,7 @@ header .logo img{
     text-align: center;
     padding-bottom: 2rem;
   }
-  .block h3{
+  .testimonials-block h3{
     font-size: 24px;
     letter-spacing: 0px;
     color: #ffffff;
@@ -425,7 +413,7 @@ header .logo img{
     padding: 0;
     text-align: left;
   }
-  .block h4{
+  .testimonials-block h4{
     font-size: 18px;
     letter-spacing: 0px;
     color: #ffdd99;
@@ -433,11 +421,11 @@ header .logo img{
     text-align: left;
     padding: 0;
   }
-  .block .inner-block{
+  .testimonials-block .inner-block{
     margin-left: 45px;
 
   }
-  .block .inner-block p{
+  .testimonials-block .inner-block p{
     width: 330px;
     height: 90px;
     font-size: 21px;
@@ -459,26 +447,7 @@ header .logo img{
     flex-direction: column;
     color: white;
     padding: 2rem 7%;
-  }
-  .get-in-touch .inner-services{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    width: 100vw;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-bottom: 120px;
-  }
-  .inner-services .block{
-    display: flex;
-    align-items:flex-start;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
     flex: 1 1 200px;
-    text-align: center;
-    padding: 2rem 1rem;
   }
   .testimonials h1{
     font-size: 40px;
@@ -501,6 +470,49 @@ header .logo img{
     text-align: center;
     padding-bottom: 2rem;
   }
+  .get-in-touch .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 15px;
+    width: 100vw;
+    /* padding-left: 10%;
+    padding-right: 10%; */
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+.form input{
+    padding: 5px 5px;
+    margin-bottom: 5px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background-color: #273a71;
+    border-radius: 4px;
+    width: 414px;
+    height: 56px;
+}
+.form textarea{
+    padding: 5px 5px;
+    margin-bottom: 5px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background-color: #273a71;
+    border-radius: 4px;
+    width: 840px;
+    height: 200px;
+}
+::placeholder {
+    font-size: 18px;
+    line-height: 18px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Titillium Web";
+    padding: 5px;
+  }
   .button-send-message a{
     color: white;
     width: 293px;
@@ -516,3 +528,27 @@ header .logo img{
     align-items: center;
     margin-bottom: 100px;
   }
+/* socila links */
+
+footer{
+    width: 100vw;
+    height: 100px;
+    background-color: #344b8e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer a{
+font-size: 24px;
+letter-spacing: 0px;
+line-height: 30px;
+color: #ffffff;
+font-weight: 600;
+font-family: "Titillium Web";
+text-align: center;
+padding: 30px;
+}
+footer a:hover{
+    color: #30bae7;
+    cursor: pointer;
+}
